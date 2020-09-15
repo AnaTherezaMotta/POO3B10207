@@ -23,7 +23,7 @@ namespace POO3B10207.DTO
                 }
                 else
                 {
-                    throw new Exception("É obrigatorio preecher o nome do autor!!!");
+                    throw new Exception("É obrigatorio preencher o nome do autor!!!");
                 }
             }
         }
@@ -38,7 +38,7 @@ namespace POO3B10207.DTO
                 }
                 else
                 {
-                    throw new Exception("A idade do autor é invalida!!!");
+                    throw new Exception("A idade do autor que você colocou é invalida!!!");
                 }
             }
         }
