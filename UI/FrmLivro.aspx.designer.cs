@@ -11,7 +11,7 @@ namespace POO3B10207.UI
 {
 
 
-    public partial class FrmLivros
+    public partial class FrmLivro
     {
 
         /// <summary>
