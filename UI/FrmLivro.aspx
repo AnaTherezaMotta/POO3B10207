@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="../Content/bootstrap.css" rel="stylesheet" />
     <link href="./Style/global.css" rel="stylesheet" />
-    <title>Formulário Livro</title>
+    <title>Formulário do Livro</title>
 </head>
 <body>
     <div class="container">
