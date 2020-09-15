@@ -19,19 +19,19 @@ namespace POO3B10207.BLL
 
         public void criarEditora(tblEditoraDTO dados)
         {
-            string sql = string.Format($@"INSERT INTO TBL_Editora VALUES (NULL, '{dados.Nome_editora}', '{dados.Endereco_editora}', '{dados.UF_editora}');");
+            string sql = string.Format($@"INSERT INTO TBL_Editora VALUES (NULL, '{dados.NomeEditora}', '{dados.EnderecoEditora}', '{dados.UFEditora}');");
             daoBanco.executarConsulta(sql);
         }
 
         public void deletarEditora(tblEditoraDTO dados)
         {
-            string query = string.Format($@"DELETE FROM TBL_Editora where id = {dados.Id_editora};");
+            string query = string.Format($@"DELETE FROM TBL_Editora where id = {dados.IdEditora};");
             daoBanco.executarComando(query);
         }
 
         public void atualizarEditora(tblEditoraDTO dados)
         {
-            string query = string.Format($@"UPDATE TBL_Editora SET nome = '{dados.Nome_editora}', endereco = '{dados.Endereco_editora}', UF = '{dados.UF_editora}' ) WHERE id = {dados.Id_editora};");
+            string query = string.Format($@"UPDATE TBL_Editora SET nome = '{dados.NomeEditora}', endereco = '{dados.EnderecoEditora}', UF = '{dados.UFEditora}' ) WHERE id = {dados.IdEditora};");
             daoBanco.executarComando(query);
         }
     }   
