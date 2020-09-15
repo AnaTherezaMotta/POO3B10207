@@ -4,10 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using POO3B10924.BLL;
-using POO3B10924.DTO;
+using POO3B10207.BLL;
+using POO3B10207.DTO;
 
-namespace POO3B10924.UI
+namespace POO3B10207.UI
 {
     public partial class FrmLivros : System.Web.UI.Page
     {
@@ -22,15 +22,15 @@ namespace POO3B10924.UI
         {
             if (IsPostBack == false)
             {
-                drpAutor.DataSource = autorBLL.listarAutores();
-                drpAutor.DataTextField = "nome";
-                drpAutor.DataValueField = "idAutor";
-                drpAutor.DataBind();
+                drpautor.DataSource = autorBLL.listarAutores();
+                drpautor.DataTextField = "nome";
+                drpautor.DataValueField = "idAutor";
+                drpautor.DataBind();
 
-                drpEditora.DataSource = editoraBLL.listarEditoras();
-                drpEditora.DataTextField = "nome";
-                drpEditora.DataValueField = "idEditora";
-                drpEditora.DataBind();
+                drpeditora.DataSource = editoraBLL.listarEditoras();
+                drpeditora.DataTextField = "nome";
+                drpeditora.DataValueField = "idEditora";
+                drpeditora.DataBind();
 
                 renderizarGrid();
             }
@@ -46,12 +46,12 @@ namespace POO3B10924.UI
         {
             try
             {
-                livroDTO.Id_autor = int.Parse(drpAutor.SelectedValue.ToString());
-                livroDTO.Id_editora= int.Parse(drpEditora.SelectedValue.ToString());
+                livroDTO.IdAutor = int.Parse(drpautor.SelectedValue.ToString());
+                livroDTO.IdEditora= int.Parse(drpeditora.SelectedValue.ToString());
                 livroDTO.Data_cadastro = Convert.ToDateTime(txtDataCadastro.Text);
-                livroDTO.Titulo_livro = txtTitulo.Text;
-                livroDTO.Num_paginas = int.Parse(txtNumPaginas.Text);
-                livroDTO.Valor_livro = double.Parse(txtValor.Text);
+                livroDTO.TituloLivro = txtTitulo.Text;
+                livroDTO.Num_paginas = int.Parse(txtNumeroPaginas.Text);
+                livroDTO.ValorLivro = double.Parse(txtValor.Text);
 
                 livroBLL.criarLivro(livroDTO);
 
@@ -59,7 +59,7 @@ namespace POO3B10924.UI
 
                 renderizarGrid();
                 messageSuccess.Visible = true;
-                messageSuccess.Text = "Livro salvo!";
+                messageSuccess.Text = "Livro salvo com sucesso!";
             }
             catch (Exception error)
             {
@@ -74,11 +74,11 @@ namespace POO3B10924.UI
         {
             try
             {
-                livroDTO.Id_livro = Convert.ToInt32(e.Values[0]);
+                livroDTO.IdLivro = Convert.ToInt32(e.Values[0]);
                 livroBLL.deletarLivro(livroDTO);
 
                 messageSuccess.Visible = true;
-                messageSuccess.Text = "Livro deletado!";
+                messageSuccess.Text = "Livro deletado com sucesso!";
 
                 renderizarGrid();
             }
@@ -99,13 +99,13 @@ namespace POO3B10924.UI
         {
             try
             {
-                livroDTO.Id_livro = int.Parse(e.NewValues[0].ToString());
-                livroDTO.Id_autor = int.Parse(e.NewValues[1].ToString());
-                livroDTO.Id_editora = int.Parse(e.NewValues[2].ToString());
-                livroDTO.Titulo_livro = e.NewValues[3].ToString();
+                livroDTO.IdLivro = int.Parse(e.NewValues[0].ToString());
+                livroDTO.IdAutor = int.Parse(e.NewValues[1].ToString());
+                livroDTO.IdEditora = int.Parse(e.NewValues[2].ToString());
+                livroDTO.TituloLivro = e.NewValues[3].ToString();
                 livroDTO.Data_cadastro = Convert.ToDateTime(e.NewValues[4]);
                 livroDTO.Num_paginas = int.Parse(e.NewValues[5].ToString());
-                livroDTO.Valor_livro = double.Parse(e.NewValues[6].ToString());
+                livroDTO.ValorLivro = double.Parse(e.NewValues[6].ToString());
 
                 livroBLL.atualizarLivro(livroDTO);
 
