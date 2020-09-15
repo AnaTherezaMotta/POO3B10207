@@ -7,19 +7,19 @@ namespace POO3B10207.DTO
 {
     public class tblLivroDTO
     {
-        private int id_livro, id_autor, id_editora, num_paginas;
-        private double valor_livro;
-        private DateTime data_cadastro;
-        private string titulo_livro;
+        private int idlivro, idautor, ideditora, numeropaginas;
+        private double valorlivro;
+        private DateTime datacadastro;
+        private string titulolivro;
 
         public string TituloLivro
         {
-            get { return titulo_livro; }
+            get { return titulolivro; }
             set
             {
                 if(value != string.Empty)
                 {
-                    titulo_livro = value;
+                    titulolivro = value;
                 }
                 else
                 {
@@ -28,18 +28,18 @@ namespace POO3B10207.DTO
             }
         }
 
-        public DateTime DataCadastro { get => data_cadastro; set => data_cadastro = value; }
-        public int IdLivro { get => id_livro; set => id_livro = value; }
-        public int IdAutor { get => id_autor; set => id_autor = value; }
-        public int IdEditora { get => id_editora; set => id_editora = value; }
+        public DateTime DataCadastro { get => datacadastro; set => datacadastro = value; }
+        public int IdLivro { get => idlivro; set => idlivro = value; }
+        public int IdAutor { get => id_autor; set => idautor = value; }
+        public int IdEditora { get => ideditora; set => ideditora = value; }
 
         public double ValorLivro { 
-            get { return valor_livro; }
+            get { return valorlivro; }
             set
             {
                 if(value != 0)
                 {
-                    valor_livro = value;
+                    valorlivro = value;
                 }
                 else
                 {
@@ -50,12 +50,12 @@ namespace POO3B10207.DTO
 
         public int NumeroPaginas
         {
-            get { return num_paginas; }
+            get { return numeropaginas; }
             set
             {
                 if (value != 0)
                 {
-                    num_paginas = value;
+                    numeropaginas = value;
                 }
                 else
                 {
