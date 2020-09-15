@@ -48,9 +48,9 @@ namespace POO3B10207.UI
             {
                 livroDTO.IdAutor = int.Parse(drpautor.SelectedValue.ToString());
                 livroDTO.IdEditora= int.Parse(drpeditora.SelectedValue.ToString());
-                livroDTO.Data_cadastro = Convert.ToDateTime(txtDataCadastro.Text);
+                livroDTO.DataCadastro = Convert.ToDateTime(txtDataCadastro.Text);
                 livroDTO.TituloLivro = txtTitulo.Text;
-                livroDTO.Num_paginas = int.Parse(txtNumeroPaginas.Text);
+                livroDTO.NumeroPaginas = int.Parse(txtNumeroPaginas.Text);
                 livroDTO.ValorLivro = double.Parse(txtValor.Text);
 
                 livroBLL.criarLivro(livroDTO);
