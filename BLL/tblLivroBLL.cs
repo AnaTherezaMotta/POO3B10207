@@ -31,7 +31,7 @@ namespace POO3B10207.BLL
 
         public void atualizarLivro(tblLivroDTO dados)
         {
-            string sql = string.Format($@"UPDATE TBL_Livro SET idAutor = '{dados.IdAutor}', idEditora = '{dados.IdEditora}', titulo = '{dados.TituloLivro}', dataCadastro = '{dados.DataCadastro.ToString("yyyy-MM-dd")}', numeroPaginas = '{dados.NumeroPaginas}', valor = '{dados.ValorLivro}' WHERE idLivro = '{dados.Id\livro}';");
+            string sql = string.Format($@"UPDATE TBL_Livro SET idAutor = '{dados.IdAutor}', idEditora = '{dados.IdEditora}', titulo = '{dados.TituloLivro}', dataCadastro = '{dados.DataCadastro.ToString("yyyy-MM-dd")}', numeroPaginas = '{dados.NumeroPaginas}', valor = '{dados.ValorLivro}' WHERE idLivro = '{dados.IdLivro}';");
             daoBanco.executarComando(sql);
         }
     }
