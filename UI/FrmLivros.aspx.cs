@@ -22,12 +22,12 @@ namespace POO3B10207.UI
         {
             if (IsPostBack == false)
             {
-                drpautor.DataSource = autorBLL.listarAutores();
+                drpautor.DataSource = autorBLL.listarAutor();
                 drpautor.DataTextField = "nome";
                 drpautor.DataValueField = "idAutor";
                 drpautor.DataBind();
 
-                drpeditora.DataSource = editoraBLL.listarEditoras();
+                drpeditora.DataSource = editoraBLL.listarEditora();
                 drpeditora.DataTextField = "nome";
                 drpeditora.DataValueField = "idEditora";
                 drpeditora.DataBind();
@@ -38,7 +38,7 @@ namespace POO3B10207.UI
 
         public void renderizarGrid()
         {
-            GridLivro.DataSource = livroBLL.listarLivros();
+            GridLivro.DataSource = livroBLL.listarLivro();
             GridLivro.DataBind();
         }
 
