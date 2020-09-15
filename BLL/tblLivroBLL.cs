@@ -19,7 +19,7 @@ namespace POO3B10207.BLL
 
         public void criarLivro(tblLivroDTO dados)
         {
-            string sql = string.Format($@"INSERT INTO TBL_Livro VALUES(NULL, '{dados.IdAutor}', '{dados.IdEditora}', '{dados.TituloLivro}', '{dados.Data_cadastro.ToString("yyyy-MM-dd")}', '{dados.Num_paginas}', '{dados.ValorLivro}');");
+            string sql = string.Format($@"INSERT INTO TBL_Livro VALUES(NULL, '{dados.IdAutor}', '{dados.IdEditora}', '{dados.TituloLivro}', '{dados.DataCadastro.ToString("yyyy-MM-dd")}', '{dados.NumeroPaginas}', '{dados.ValorLivro}');");
             daoBanco.executarComando(sql);
         }
 
@@ -31,7 +31,7 @@ namespace POO3B10207.BLL
 
         public void atualizarLivro(tblLivroDTO dados)
         {
-            string sql = string.Format($@"UPDATE TBL_Livro SET idAutor = '{dados.IdAutor}', idEditora = '{dados.IdEditora}', titulo = '{dados.TituloLivro}', dataCadastro = '{dados.Data_cadastro.ToString("yyyy-MM-dd")}', numPaginas = '{dados.Num_paginas}', valor = '{dados.ValorLivro}' WHERE idLivro = '{dados.Id\livro}';");
+            string sql = string.Format($@"UPDATE TBL_Livro SET idAutor = '{dados.IdAutor}', idEditora = '{dados.IdEditora}', titulo = '{dados.TituloLivro}', dataCadastro = '{dados.DataCadastro.ToString("yyyy-MM-dd")}', numPaginas = '{dados.NumeroPaginas}', valor = '{dados.ValorLivro}' WHERE idLivro = '{dados.Id\livro}';");
             daoBanco.executarComando(sql);
         }
     }
