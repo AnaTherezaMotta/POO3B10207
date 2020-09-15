@@ -30,7 +30,7 @@ namespace POO3B10207.DTO
 
         public DateTime DataCadastro { get => datacadastro; set => datacadastro = value; }
         public int IdLivro { get => idlivro; set => idlivro = value; }
-        public int IdAutor { get => id_autor; set => idautor = value; }
+        public int IdAutor { get => idautor; set => idautor = value; }
         public int IdEditora { get => ideditora; set => ideditora = value; }
 
         public double ValorLivro { 
