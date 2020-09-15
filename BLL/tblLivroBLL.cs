@@ -23,7 +23,7 @@ namespace POO3B10207.BLL
             daoBanco.executarComando(sql);
         }
 
-        public void deletarLivro(tblLivroDTO dados)
+        public void apagarLivro(tblLivroDTO dados)
         {
             string sql = string.Format($@"DELETE FROM TBL_Livro where idLivro = {dados.IdLivro};");
             daoBanco.executarComando(sql);
