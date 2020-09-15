@@ -11,7 +11,7 @@ namespace POO3B10207.BLL
     public class tblEditoraBLL
     {
         private DALMysql daoBanco = new DALMysql();
-        public DataTable listarEditoras()
+        public DataTable listarEditora()
         {
             string sql = string.Format($@"SELECT * FROM TBL_Editora");
             return daoBanco.executarConsulta(sql);
