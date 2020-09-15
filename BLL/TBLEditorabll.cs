@@ -1,38 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Web;
-using POO3B10207.DAL;
-using POO3B10207.DTO;
+using  System ;
+usando o  sistema . Coleções . Genérico ;
+usando o  sistema . Dados ;
+usando o  sistema . Linq ;
+usando o  sistema . Web ;
+usando  POO3B10207 . DAL ;
+usando  POO3B10207 . DTO ;
 
-namespace POO3B10207.BLL
+namespace  POO3B10207 . BLL
 {
-    public class tblEditoraBLL
+    public  class  TBLEditorabll
     {
-        private DALMysql daoBanco = new DALMysql();
-        public DataTable listarEditoras()
+         DALMysql  daoBanco  privado =  novo  DALMysql ();
+        public  DataTable  listarEditora ()
         {
-            string sql = string.Format($@"SELECT * FROM TBL_Editora");
-            return daoBanco.executarConsulta(sql);
+            string  sql  =  string . Formato ( $ @ " SELECT * FROM TBL_Editora " );
+            voltar  daoBanco . executarConsulta ( sql );
         }
 
-        public void criarEditora(tblEditoraDTO dados)
+        public  void  criarEditora ( TBLEditoradto  dados )
         {
-            string sql = string.Format($@"INSERT INTO TBL_Editora VALUES (NULL, '{dados.Nome_editora}', '{dados.Endereco_editora}', '{dados.UF_editora}');");
-            daoBanco.executarConsulta(sql);
+            string  sql  =  string . Formato ( $ @ " INSERT INTO TBL_Editora VALUES (NULL, '{ dados . NomeEditora }', '{ dados . EnderecoEditora }', '{ dados . UFEditora }'); " );
+            daoBanco . executarConsulta ( sql );
         }
 
-        public void deletarEditora(tblEditoraDTO dados)
+        public  void  apagarEditora ( TBLEditoradto  dados )
         {
-            string query = string.Format($@"DELETE FROM TBL_Editora where id = {dados.Id_editora};");
-            daoBanco.executarComando(query);
+            string  query  =  string . Formato ( $ @ " DELETE FROM TBL_Editora where id = { dados . IdEditora }; " );
+            daoBanco . executarComando ( consulta );
         }
 
-        public void atualizarEditora(tblEditoraDTO dados)
+        public  void  atualizarEditora ( TBLEditoradto  dados )
         {
-            string query = string.Format($@"UPDATE TBL_Editora SET nome = '{dados.Nome_editora}', endereco = '{dados.Endereco_editora}', UF = '{dados.UF_editora}' ) WHERE id = {dados.Id_editora};");
-            daoBanco.executarComando(query);
+            string  query  =  string . Formato ( $ @ " UPDATE TBL_Editora SET nome = '{ dados . NomeEditora }', endereco = '{ dados . EnderecoEditora }', UF = '{ dados . UFEditora }') WHERE id = { dados . IdEditora }; " );
+            daoBanco . executarComando ( consulta );
         }
     }   
 }
