@@ -7,19 +7,19 @@ namespace POO3B10207.DTO
 {
     public class tblEditoraDTO
     {
-        private int id_editora;
-        private string nome_editora, endereco_editora, uf_editora;
+        private int ideditora;
+        private string nomeeditora, enderecoeditora, ufeditora;
 
-        public int IdEditora { get => id_editora; set => id_editora = value; }
+        public int IdEditora { get => ideditora; set => ideditora = value; }
 
         public string NomeEditora
         {
-            get { return nome_editora; }
+            get { return nomeeditora; }
             set
             {
                 if (value != string.Empty)
                 {
-                    nome_editora = value;
+                    nomeeditora = value;
                 }
                 else
                 {
@@ -30,12 +30,12 @@ namespace POO3B10207.DTO
 
         public string EnderecoEditora
         {
-            get { return endereco_editora; }
+            get { return enderecoeditora; }
             set
             {
                 if (value != string.Empty)
                 {
-                    endereco_editora = value;
+                    enderecoeditora = value;
                 }
                 else
                 {
@@ -46,12 +46,12 @@ namespace POO3B10207.DTO
 
         public string UFEditora
         {
-            get { return uf_editora; }
+            get { return ufeditora; }
             set
             {
                 if (value != string.Empty)
                 {
-                    uf_editora = value;
+                    ufeditora = value;
                 }
                 else
                 {
