@@ -23,7 +23,7 @@ namespace POO3B10207.BLL
             daoBanco.executarConsulta(sql);
         }
 
-        public void deletarEditora(tblEditoraDTO dados)
+        public void apagarEditora(tblEditoraDTO dados)
         {
             string query = string.Format($@"DELETE FROM TBL_Editora where id = {dados.IdEditora};");
             daoBanco.executarComando(query);
