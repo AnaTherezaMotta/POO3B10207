@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data;
-using POO3B10924.DAL;
-using POO3B10924.DTO;
+using POO3B102207.DAL;
+using POO3B10207.DTO;
 
-namespace POO3B10924.BLL
+namespace POO3B10207.BLL
 {
     public class tblLivroBLL
     {
@@ -19,19 +19,19 @@ namespace POO3B10924.BLL
 
         public void criarLivro(tblLivroDTO dados)
         {
-            string sql = string.Format($@"INSERT INTO TBL_Livro VALUES(NULL, '{dados.Id_autor}', '{dados.Id_editora}', '{dados.Titulo_livro}', '{dados.Data_cadastro.ToString("yyyy-MM-dd")}', '{dados.Num_paginas}', '{dados.Valor_livro}');");
+            string sql = string.Format($@"INSERT INTO TBL_Livro VALUES(NULL, '{dados.IdAutor}', '{dados.IdEditora}', '{dados.TituloLivro}', '{dados.Data_cadastro.ToString("yyyy-MM-dd")}', '{dados.Num_paginas}', '{dados.ValorLivro}');");
             daoBanco.executarComando(sql);
         }
 
         public void deletarLivro(tblLivroDTO dados)
         {
-            string sql = string.Format($@"DELETE FROM TBL_Livro where idLivro = {dados.Id_livro};");
+            string sql = string.Format($@"DELETE FROM TBL_Livro where idLivro = {dados.IdLivro};");
             daoBanco.executarComando(sql);
         }
 
         public void atualizarLivro(tblLivroDTO dados)
         {
-            string sql = string.Format($@"UPDATE TBL_Livro SET idAutor = '{dados.Id_autor}', idEditora = '{dados.Id_editora}', titulo = '{dados.Titulo_livro}', dataCadastro = '{dados.Data_cadastro.ToString("yyyy-MM-dd")}', numPaginas = '{dados.Num_paginas}', valor = '{dados.Valor_livro}' WHERE idLivro = '{dados.Id_livro}';");
+            string sql = string.Format($@"UPDATE TBL_Livro SET idAutor = '{dados.IdAutor}', idEditora = '{dados.IdEditora}', titulo = '{dados.TituloLivro}', dataCadastro = '{dados.Data_cadastro.ToString("yyyy-MM-dd")}', numPaginas = '{dados.Num_paginas}', valor = '{dados.ValorLivro}' WHERE idLivro = '{dados.Id\livro}';");
             daoBanco.executarComando(sql);
         }
     }
