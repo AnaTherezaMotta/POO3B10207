@@ -28,7 +28,7 @@ namespace POO3B10207.DTO
             }
         }
 
-        public DateTime Data_cadastro { get => data_cadastro; set => data_cadastro = value; }
+        public DateTime DataCadastro { get => data_cadastro; set => data_cadastro = value; }
         public int IdLivro { get => id_livro; set => id_livro = value; }
         public int IdAutor { get => id_autor; set => id_autor = value; }
         public int IdEditora { get => id_editora; set => id_editora = value; }
@@ -48,7 +48,7 @@ namespace POO3B10207.DTO
             }
         }
 
-        public int Num_paginas
+        public int NumeroPaginas
         {
             get { return num_paginas; }
             set
