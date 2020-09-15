@@ -1,65 +1,65 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using  System ;
+usando o  sistema . Coleções . Genérico ;
+usando o  sistema . Linq ;
+usando o  sistema . Web ;
 
-namespace POO3B10207.DTO
+namespace  POO3B10207 . DTO
 {
-    public class tblLivroDTO
+     classe  pública TBLLivrodto
     {
-        private int id_livro, id_autor, id_editora, num_paginas;
-        private double valor_livro;
-        private DateTime data_cadastro;
-        private string titulo_livro;
+        privado  int  idlivro , idautor , ideditora , numeropaginas ;
+         valorlivro duplo  privado ;
+         datacadastro DateTime  privado ;
+         titulolivro string  privado ;
 
-        public string TituloLivro
+        public  string  TituloLivro
         {
-            get { return titulo_livro; }
-            set
+            get { return  titulolivro ; }
+            conjunto
             {
-                if(value != string.Empty)
+                if ( valor  ! =  string . Vazio )
                 {
-                    titulo_livro = value;
+                    titulolivro  =  valor ;
                 }
-                else
+                outro
                 {
-                    throw new Exception("Título do Livro é obrigatório!");
+                    lançar uma  nova  Exception ( " Título do Livro é obrigatório! " );
                 }
             }
         }
 
-        public DateTime Data_cadastro { get => data_cadastro; set => data_cadastro = value; }
-        public int IdLivro { get => id_livro; set => id_livro = value; }
-        public int IdAutor { get => id_autor; set => id_autor = value; }
-        public int IdEditora { get => id_editora; set => id_editora = value; }
+        public  DateTime  DataCadastro { get  =>  datacadastro ; conjunto  =>  datacadastro  =  valor ; }
+        público  int  IdLivro { get  =>  idlivro ; definir  =>  idlivro  =  valor ; }
+        public  int  IdAutor { get  =>  idautor ; definir  =>  idautor  =  valor ; }
+        public  int  IdEditora { get  =>  ideditora ; definir  =>  ideditora  =  valor ; }
 
-        public double ValorLivro { 
-            get { return valor_livro; }
-            set
+        public  double  ValorLivro {
+            obter { return  valorlivro ; }
+            conjunto
             {
-                if(value != 0)
+                if ( valor  ! =  0 )
                 {
-                    valor_livro = value;
+                    valorlivro  =  valor ;
                 }
-                else
+                outro
                 {
-                    throw new Exception("É necessario preencher o valor do livro!");
+                    lançar  nova  Exceção ( " É necessário preencher o valor do livro! " );
                 }
             }
         }
 
-        public int Num_paginas
+        public  int  NumeroPaginas
         {
-            get { return num_paginas; }
-            set
+            get { return  numeropaginas ; }
+            conjunto
             {
-                if (value != 0)
+                if ( valor  ! =  0 )
                 {
-                    num_paginas = value;
+                    numeropaginas  =  valor ;
                 }
-                else
+                outro
                 {
-                    throw new Exception("É necessário preencher o número de páginas!");
+                    lançar uma  nova  Exception ( " É necessário preencher o número de páginas! " );
                 }
             }
         }
