@@ -11,7 +11,7 @@ namespace POO3B10207.BLL
     public class tblAutorBLL
     {
         private DALMysql daoBanco = new DALMysql();
-        public DataTable listarAutores()
+        public DataTable listarAutor()
         {
             string sql = string.Format($@"SELECT * FROM TBL_Autor");
             return daoBanco.executarConsulta(sql);
