@@ -23,7 +23,7 @@ namespace POO3B10207.DTO
                 }
                 else
                 {
-                    throw new Exception("É obrigatorio preecher o campo email.");
+                    throw new Exception("É obrigatorio preencher o campo email.");
                 }
             }
         }
@@ -39,7 +39,7 @@ namespace POO3B10207.DTO
                 }
                 else
                 {
-                    throw new Exception("É obrigatorio preecher o campo endereço.");
+                    throw new Exception("É obrigatorio preencher o campo endereço.");
                 }
             }
         }
@@ -55,7 +55,7 @@ namespace POO3B10207.DTO
                 }
                 else
                 {
-                    throw new Exception("É obrigatorio preecher o campo UF");
+                    throw new Exception("É obrigatorio preencher o campo UF");
                 }
             }
         }
