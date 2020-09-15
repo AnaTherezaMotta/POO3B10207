@@ -75,7 +75,7 @@ namespace POO3B10207.UI
             try
             {
                 livroDTO.IdLivro = Convert.ToInt32(e.Values[0]);
-                livroBLL.deletarLivro(livroDTO);
+                livroBLL.apagarLivro(livroDTO);
 
                 messageSuccess.Visible = true;
                 messageSuccess.Text = "Livro deletado com sucesso!";
