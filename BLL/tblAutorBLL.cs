@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data;
-using POO3B10924.DAL;
-using POO3B10924.DTO;
+using POO3B10207.DAL;
+using POO3B10207.DTO;
 
-namespace POO3B10924.BLL
+namespace POO3B10207.BLL
 {
     public class tblAutorBLL
     {
@@ -19,19 +19,19 @@ namespace POO3B10924.BLL
 
         public void criarAutor(tblAutorDTO dados)
         {
-            string sql = string.Format($@"INSERT INTO TBL_Autor VALUES (NULL, '{dados.Nome_autor}', '{dados.Idade_autor}');");
+            string sql = string.Format($@"INSERT INTO TBL_Autor VALUES (NULL, '{dados.NomeAutor}', '{dados.IdadeAutor}');");
             daoBanco.executarComando(sql);
         }
 
         public void deletarAutor(tblAutorDTO dados)
         {
-            string sql = string.Format($@"DELETE FROM TBL_Autor where id = {dados.Id_autor};");
+            string sql = string.Format($@"DELETE FROM TBL_Autor where id = {dados.IdAutor};");
             daoBanco.executarComando(sql);
         }
 
         public void atualizarAutor(tblAutorDTO dados)
         {
-            string sql = string.Format($@"UPDATE TBL_Autor SET nome = '{dados.Nome_autor}', idade = '{dados.Idade_autor}' ) WHERE id = {dados.Id_autor};");
+            string sql = string.Format($@"UPDATE TBL_Autor SET nome = '{dados.NomeAutor}', idade = '{dados.IdadeAutor}' ) WHERE id = {dados.IdAutor};");
             daoBanco.executarComando(sql);
         }
     }
