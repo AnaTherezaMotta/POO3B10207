@@ -12,11 +12,11 @@ namespace POO3B10207.UI
     public partial class FrmLivros : System.Web.UI.Page
     {
 
-        readonly tblAutorBLL autorBLL = new tblAutorBLL();
-        readonly tblEditoraBLL editoraBLL = new tblEditoraBLL();
+        readonly TBLAutorbll autorBLL = new TBLAutorbll();
+        readonly TBLEditorabll editoraBLL = new TBLEditorabll();
 
-        readonly tblLivroBLL livroBLL = new tblLivroBLL();
-        readonly tblLivroDTO livroDTO = new tblLivroDTO();
+        readonly TBLLivrobll livroBLL = new TBLLivrobll();
+        readonly TBLLivrodto livroDTO = new TBLLivrodto();
 
         protected void Page_Load(object sender, EventArgs e)
         {
