@@ -7,19 +7,19 @@ namespace POO3B10207.DTO
 {
     public class tblAutorDTO
     {
-        private int id_autor, idade_autor;
-        private string nome_autor;
+        private int idautor, idadeautor;
+        private string nomeautor;
 
-        public int IdAutor { get => id_autor; set => id_autor = value; }
+        public int IdAutor { get => idautor; set => idautor = value; }
 
         public string NomeAutor
         {
-            get { return nome_autor; }
+            get { return nomeautor; }
             set
             {
                 if (value != string.Empty)
                 {
-                    nome_autor = value;
+                    nomeautor = value;
                 }
                 else
                 {
@@ -29,12 +29,12 @@ namespace POO3B10207.DTO
         }
 
         public int IdadeAutor { 
-            get { return idade_autor; }
+            get { return idadeautor; }
             set
             {
                 if(value >= 0)
                 {
-                    idade_autor = value;
+                    idadeautor = value;
                 }
                 else
                 {
