@@ -1,38 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Data;
-using POO3B10924.DAL;
-using POO3B10924.DTO;
+using  System ;
+usando o  sistema . Coleções . Genérico ;
+usando o  sistema . Linq ;
+usando o  sistema . Web ;
+usando o  sistema . Dados ;
+usando  POO3B10207 . DAL ;
+usando  POO3B10207 . DTO ;
 
-namespace POO3B10924.BLL
+namespace  POO3B10207 . BLL
 {
-    public class tblAutorBLL
+     classe  pública TBLAutorbll
     {
-        private DALMysql daoBanco = new DALMysql();
-        public DataTable listarAutores()
+         DALMysql  daoBanco  privado =  novo  DALMysql ();
+        public  DataTable  listarAutor ()
         {
-            string sql = string.Format($@"SELECT * FROM TBL_Autor");
-            return daoBanco.executarConsulta(sql);
+            string  sql  =  string . Formato ( $ @ " SELECT * FROM TBL_Autor " );
+            voltar  daoBanco . executarConsulta ( sql );
         }
 
-        public void criarAutor(tblAutorDTO dados)
+        public  void  criarAutor ( TBLAutordto  dados )
         {
-            string sql = string.Format($@"INSERT INTO TBL_Autor VALUES (NULL, '{dados.Nome_autor}', '{dados.Idade_autor}');");
-            daoBanco.executarComando(sql);
+            string  sql  =  string . Formato ( $ @ " INSERT INTO TBL_Autor VALUES (NULL, '{ dados . NomeAutor }', '{ dados . IdadeAutor }'); " );
+            daoBanco . executarComando ( sql );
         }
 
-        public void deletarAutor(tblAutorDTO dados)
+        public  void  apagarAutor ( TBLAutordto  dados )
         {
-            string sql = string.Format($@"DELETE FROM TBL_Autor where id = {dados.Id_autor};");
-            daoBanco.executarComando(sql);
+            string  sql  =  string . Formato ( $ @ " DELETE FROM TBL_Autor where id = { dados . IdAutor }; " );
+            daoBanco . executarComando ( sql );
         }
 
-        public void atualizarAutor(tblAutorDTO dados)
+        public  void  atualizarAutor ( TBLAutordto  dados )
         {
-            string sql = string.Format($@"UPDATE TBL_Autor SET nome = '{dados.Nome_autor}', idade = '{dados.Idade_autor}' ) WHERE id = {dados.Id_autor};");
-            daoBanco.executarComando(sql);
+            string  sql  =  string . Formato ( $ @ " UPDATE TBL_Autor SET nome = '{ dados . NomeAutor }', idade = '{ dados . IdadeAutor }') WHERE id = { dados . IdAutor }; " );
+            daoBanco . executarComando ( sql );
         }
     }
 }
