@@ -11,7 +11,7 @@ namespace POO3B10207.BLL
     public class tblLivroBLL
     {
         private DALMysql daoBanco = new DALMysql();
-        public DataTable listarLivros()
+        public DataTable listarLivro()
         {
             string sql = string.Format($@"SELECT * FROM TBL_Livro");
             return daoBanco.executarConsulta(sql);
