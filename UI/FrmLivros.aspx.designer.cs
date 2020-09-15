@@ -7,7 +7,7 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace POO3B10924.UI
+namespace POO3B10207.UI
 {
 
 
@@ -57,7 +57,7 @@ namespace POO3B10924.UI
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpAutor;
+        protected global::System.Web.UI.WebControls.DropDownList drpautor;
 
         /// <summary>
         /// Controle drpEditora.
@@ -66,7 +66,7 @@ namespace POO3B10924.UI
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpEditora;
+        protected global::System.Web.UI.WebControls.DropDownList drpeditora;
 
         /// <summary>
         /// Controle txtDataCadastro.
@@ -84,7 +84,7 @@ namespace POO3B10924.UI
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNumPaginas;
+        protected global::System.Web.UI.WebControls.TextBox txtNumeroPaginas;
 
         /// <summary>
         /// Controle txtValor.
