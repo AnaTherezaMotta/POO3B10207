@@ -1,61 +1,61 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using  System ;
+usando o  sistema . Coleções . Genérico ;
+usando o  sistema . Linq ;
+usando o  sistema . Web ;
 
-namespace POO3B10207.DTO
+namespace  POO3B10207 . DTO
 {
-    public class tblEditoraDTO
+     classe  pública TBLEditoradto
     {
-        private int id_editora;
-        private string nome_editora, endereco_editora, uf_editora;
+        private  int  ideditora ;
+         string  privado nomeeditora , enderecoeditora , ufeditora ;
 
-        public int IdEditora { get => id_editora; set => id_editora = value; }
+        public  int  IdEditora { get  =>  ideditora ; definir  =>  ideditora  =  valor ; }
 
-        public string NomeEditora
+        public  string  NomeEditora
         {
-            get { return nome_editora; }
-            set
+            get { return  nomeeditora ; }
+            conjunto
             {
-                if (value != string.Empty)
+                if ( valor  ! =  string . Vazio )
                 {
-                    nome_editora = value;
+                    nomeeditora  =  valor ;
                 }
-                else
+                outro
                 {
-                    throw new Exception("É obrigatorio preecher o campo email.");
+                    lançar  nova  exceção ( " É obrigatorio preencher o campo email. " );
                 }
             }
         }
 
-        public string EnderecoEditora
+        public  string  EnderecoEditora
         {
-            get { return endereco_editora; }
-            set
+            get { return  enderecoeditora ; }
+            conjunto
             {
-                if (value != string.Empty)
+                if ( valor  ! =  string . Vazio )
                 {
-                    endereco_editora = value;
+                    enderecoeditora  =  valor ;
                 }
-                else
+                outro
                 {
-                    throw new Exception("É obrigatorio preecher o campo endereço.");
+                    lançar  nova  Exceção ( " É obrigatorio preencher o campo endereço. " );
                 }
             }
         }
 
-        public string UFEditora
+        public  string  UFEditora
         {
-            get { return uf_editora; }
-            set
+            get { return  ufeditora ; }
+            conjunto
             {
-                if (value != string.Empty)
+                if ( valor  ! =  string . Vazio )
                 {
-                    uf_editora = value;
+                    ufeditora  =  valor ;
                 }
-                else
+                outro
                 {
-                    throw new Exception("É obrigatorio preecher o campo UF");
+                    lançar  nova  Exceção ( " É obrigatorio preencher o campo UF " );
                 }
             }
         }
