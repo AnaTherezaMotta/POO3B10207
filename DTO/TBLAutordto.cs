@@ -1,44 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using  System ;
+usando o  sistema . Coleções . Genérico ;
+usando o  sistema . Linq ;
+usando o  sistema . Web ;
 
-namespace POO3B10207.DTO
+namespace  POO3B10207 . DTO
 {
-    public class tblAutorDTO
+     classe  pública TBLAutordto
     {
-        private int id_autor, idade_autor;
-        private string nome_autor;
+         int  idautor privado , idadeautor ;
+         nomeautor de string  privado ;
 
-        public int IdAutor { get => id_autor; set => id_autor = value; }
+        public  int  IdAutor { get  =>  idautor ; definir  =>  idautor  =  valor ; }
 
-        public string NomeAutor
+        public  string  NomeAutor
         {
-            get { return nome_autor; }
-            set
+            get { return  nomeautor ; }
+            conjunto
             {
-                if (value != string.Empty)
+                if ( valor  ! =  string . Vazio )
                 {
-                    nome_autor = value;
+                    nomeautor  =  valor ;
                 }
-                else
+                outro
                 {
-                    throw new Exception("É obrigatorio preecher o nome do autor!!!");
+                    lançar  nova  Exceção ( " É obrigatorio preencher o nome do autor !!! " );
                 }
             }
         }
 
-        public int IdadeAutor { 
-            get { return idade_autor; }
-            set
+        public  int  IdadeAutor {
+            get { return  idadeautor ; }
+            conjunto
             {
-                if(value >= 0)
+                if ( valor  > =  0 )
                 {
-                    idade_autor = value;
+                    idadeautor  =  valor ;
                 }
-                else
+                outro
                 {
-                    throw new Exception("A idade do autor é invalida!!!");
+                    lançar  novo  Exception ( " A idade do autor que você colocou é invalida !!! " );
                 }
             }
         }
