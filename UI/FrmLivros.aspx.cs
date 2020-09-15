@@ -104,7 +104,7 @@ namespace POO3B10207.UI
                 livroDTO.IdEditora = int.Parse(e.NewValues[2].ToString());
                 livroDTO.TituloLivro = e.NewValues[3].ToString();
                 livroDTO.Data_cadastro = Convert.ToDateTime(e.NewValues[4]);
-                livroDTO.Num_paginas = int.Parse(e.NewValues[5].ToString());
+                livroDTO.NumeroPaginas = int.Parse(e.NewValues[5].ToString());
                 livroDTO.ValorLivro = double.Parse(e.NewValues[6].ToString());
 
                 livroBLL.atualizarLivro(livroDTO);
