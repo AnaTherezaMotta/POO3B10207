@@ -1,38 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Data;
-using POO3B10924.DAL;
-using POO3B10924.DTO;
+using  System ;
+usando o  sistema . Coleções . Genérico ;
+usando o  sistema . Linq ;
+usando o  sistema . Web ;
+usando o  sistema . Dados ;
+usando  POO3B102207 . DAL ;
+usando  POO3B10207 . DTO ;
 
-namespace POO3B10924.BLL
+namespace  POO3B10207 . BLL
 {
-    public class tblLivroBLL
+     classe  pública TBLLivrobll
     {
-        private DALMysql daoBanco = new DALMysql();
-        public DataTable listarLivros()
+         DALMysql  daoBanco  privado =  novo  DALMysql ();
+        public  DataTable  listarLivro ()
         {
-            string sql = string.Format($@"SELECT * FROM TBL_Livro");
-            return daoBanco.executarConsulta(sql);
+            string  sql  =  string . Formato ( $ @ " SELECT * FROM TBL_Livro " );
+            voltar  daoBanco . executarConsulta ( sql );
         }
 
-        public void criarLivro(tblLivroDTO dados)
+        public  void  criarLivro ( TBLLivrodto  dados )
         {
-            string sql = string.Format($@"INSERT INTO TBL_Livro VALUES(NULL, '{dados.Id_autor}', '{dados.Id_editora}', '{dados.Titulo_livro}', '{dados.Data_cadastro.ToString("yyyy-MM-dd")}', '{dados.Num_paginas}', '{dados.Valor_livro}');");
-            daoBanco.executarComando(sql);
+            string  sql  =  string . Formato ( $ @ " INSERT INTO TBL_Livro VALUES (NULL, '{ dados . IdAutor }', '{ dados . IdEditora }', '{ dados . TituloLivro }', '{ dados . DataCadastro . ToString ( " yyyy-MM-dd " )} ',' { dados . NumeroPaginas } ',' { dados . ValorLivro } '); " );
+            daoBanco . executarComando ( sql );
         }
 
-        public void deletarLivro(tblLivroDTO dados)
+        public  void  apagarLivro ( TBLLivrodto  dados )
         {
-            string sql = string.Format($@"DELETE FROM TBL_Livro where idLivro = {dados.Id_livro};");
-            daoBanco.executarComando(sql);
+            string  sql  =  string . Formato ( $ @ " DELETE FROM TBL_Livro onde idLivro = { dados . IdLivro }; " );
+            daoBanco . executarComando ( sql );
         }
 
-        public void atualizarLivro(tblLivroDTO dados)
+        public  void  atualizarLivro ( TBLLivrodto  dados )
         {
-            string sql = string.Format($@"UPDATE TBL_Livro SET idAutor = '{dados.Id_autor}', idEditora = '{dados.Id_editora}', titulo = '{dados.Titulo_livro}', dataCadastro = '{dados.Data_cadastro.ToString("yyyy-MM-dd")}', numPaginas = '{dados.Num_paginas}', valor = '{dados.Valor_livro}' WHERE idLivro = '{dados.Id_livro}';");
-            daoBanco.executarComando(sql);
+            string  sql  =  string . Format ( $ @ " UPDATE TBL_Livro SET idAutor = '{ dados . IdAutor }', idEditora = '{ dados . IdEditora }', titulo = '{ dados . TituloLivro }', dataCadastro = '{ dados . DataCadastro . ToString ( " yyyy -MM-dd " )} ', numeroPaginas =' { dados . NumeroPaginas } ', valor =' { dados . ValorLivro } 'WHERE idLivro =' { dados .} '; " );
+            daoBanco . executarComando ( sql );
         }
     }
 }
