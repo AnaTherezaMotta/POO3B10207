@@ -21,27 +21,27 @@
         <form id="form1" runat="server">
             <div class="form-group">
                 <asp:Label runat="server" Text="Título:" for="txtTitulo" />
-                <asp:TextBox ID="txtTitulo" runat="server" class="form-control" aria-describedby="emailHelp" />
+                <asp:TextBox ID="txtTitulo" runat="server" class="form-control" aria-describedby="emailAjuda" />
             </div>
             <div class="form-group">
-                <asp:Label runat="server" Text="Autor:" for="drpAutor" />
-                <asp:DropDownList runat="server" ID="drpAutor" class="form-control" aria-describedby="emailHelp" />
+                <asp:Label runat="server" Text="Autor:" for="drpautor" />
+                <asp:DropDownList runat="server" ID="drpautor" class="form-control" aria-describedby="emailAjuda" />
             </div>
             <div class="form-group">
-                <asp:Label runat="server" Text="Editora:" for="drpEditora" />
-                <asp:DropDownList runat="server" ID="drpEditora"  class="form-control" aria-describedby="emailHelp" />
+                <asp:Label runat="server" Text="Editora:" for="drpeditora" />
+                <asp:DropDownList runat="server" ID="drpeditora"  class="form-control" aria-describedby="emailAjuda" />
             </div>
             <div class="form-group">
                 <asp:Label runat="server" Text="Data de Cadastro:" for="txtDataCadastro" />
-                <asp:TextBox ID="txtDataCadastro" runat="server"  class="form-control" aria-describedby="emailHelp" />
+                <asp:TextBox ID="txtDataCadastro" runat="server"  class="form-control" aria-describedby="emailAjuda" />
             </div>
             <div class="form-group">
-                <asp:Label runat="server" Text="Numero de paginas:" for="txtNumPaginas" />
-                <asp:TextBox ID="txtNumPaginas" runat="server"  class="form-control" aria-describedby="emailHelp" />
+                <asp:Label runat="server" Text="Numero de paginas:" for="txtNumeroPaginas" />
+                <asp:TextBox ID="txtNumeroPaginas" runat="server"  class="form-control" aria-describedby="emailAjuda" />
             </div>
             <div class="form-group">
                 <asp:Label runat="server" Text="Valor:" for="txtValor" />
-                <asp:TextBox ID="txtValor" runat="server"  class="form-control" aria-describedby="emailHelp" />
+                <asp:TextBox ID="txtValor" runat="server"  class="form-control" aria-describedby="emailAjuda" />
             </div>
             <div class="form-group">
                 <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click"   class="btn btn-success btn-block"/>
