@@ -8,7 +8,7 @@ namespace  POO3B10207 . DTO
      class  public   TBLAutordto
     {
          int  idautor privado , idadeautor ;
-         nomeautor de string  privado ;
+         private string nomeautor;
 
         public  int  IdAutor { get  =>  idautor ; definir  =>  idautor  =  valor ; }
 
