@@ -9,7 +9,7 @@ using POO3B10207.DTO;
 
 namespace  POO3B10207 . BLL
 {
-     class  public TBLLivrobll
+    public class  TBLLivrobll
     {
         private DALMysql daoBanco = new DALMysql();
         public DataTable listarLivro()
