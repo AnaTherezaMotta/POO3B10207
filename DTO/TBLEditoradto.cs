@@ -5,10 +5,10 @@ usando o  sistema . Web ;
 
 namespace  POO3B10207 . DTO
 {
-     classe  pública TBLEditoradto
+     class public TBLEditoradto
     {
         private  int  ideditora ;
-         string  privado nomeeditora , enderecoeditora , ufeditora ;
+        private string nomeeditora , enderecoeditora , ufeditora ;
 
         public  int  IdEditora { get  =>  ideditora ; definir  =>  ideditora  =  valor ; }
 
