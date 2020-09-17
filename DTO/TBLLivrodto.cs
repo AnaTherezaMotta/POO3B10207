@@ -5,12 +5,12 @@ usando o  sistema . Web ;
 
 namespace  POO3B10207 . DTO
 {
-     classe  pública TBLLivrodto
+     class  public TBLLivrodto
     {
-        privado  int  idlivro , idautor , ideditora , numeropaginas ;
-         valorlivro duplo  privado ;
-         datacadastro DateTime  privado ;
-         titulolivro string  privado ;
+        private int  idlivro , idautor , ideditora , numeropaginas ;
+        private double valorlivro;
+        private DateTime datacadastro;
+        private string titulolivro;
 
         public  string  TituloLivro
         {
