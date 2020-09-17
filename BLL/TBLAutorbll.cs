@@ -20,19 +20,19 @@ namespace  POO3B10207 . BLL
         public  void  criarAutor ( TBLAutordto  dados )
         {
             string  sql  =  string . Formato ( $ @ " INSERT INTO TBL_Autor VALUES (NULL, '{ dados . NomeAutor }', '{ dados . IdadeAutor }'); " );
-            daoBanco . executarComando ( sql );
+            return daoBanco . executarComando ( sql );
         }
 
         public  void  apagarAutor ( TBLAutordto  dados )
         {
             string  sql  =  string .Format( $ @ " DELETE FROM TBL_Autor where id = { dados . IdAutor }; " );
-            daoBanco . executarComando ( sql );
+            return daoBanco . executarComando ( sql );
         }
 
         public  void  atualizarAutor ( TBLAutordto  dados )
         {
             string  sql  =  string . Format ( $ @ " UPDATE TBL_Autor SET nome = '{ dados . NomeAutor }', idade = '{ dados . IdadeAutor }') WHERE id = { dados . IdAutor }; " );
-            daoBanco . executarComando ( sql );
+            return daoBanco . executarComando ( sql );
         }
     }
 }
