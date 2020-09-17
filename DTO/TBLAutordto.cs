@@ -5,7 +5,7 @@ usando o  sistema . Web ;
 
 namespace  POO3B10207 . DTO
 {
-     class  pública TBLAutordto
+     class  public   TBLAutordto
     {
          int  idautor privado , idadeautor ;
          nomeautor de string  privado ;
