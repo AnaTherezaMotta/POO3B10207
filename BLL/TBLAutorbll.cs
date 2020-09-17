@@ -1,20 +1,20 @@
 using  System ;
-usando o  sistema . Coleções . Genérico ;
-usando o  sistema . Linq ;
-usando o  sistema . Web ;
-usando o  sistema . Dados ;
-usando  POO3B10207 . DAL ;
-usando  POO3B10207 . DTO ;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Data;
+using POO3B10207.DAL;
+using POO3B10207.DTO;
 
 namespace  POO3B10207 . BLL
 {
-     classe  pública TBLAutorbll
+     class  public TBLAutorbll
     {
-         DALMysql  daoBanco  privado =  novo  DALMysql ();
-        public  DataTable  listarAutor ()
+        private DALMysql daoBanco = new DALMysql();
+        public DataTable listarAutor()
         {
-            string  sql  =  string . Formato ( $ @ " SELECT * FROM TBL_Autor " );
-            voltar  daoBanco . executarConsulta ( sql );
+            string sql = string.Format($@"SELECT * FROM TBL_Autor");
+            return daoBanco.executarConsulta(sql);
         }
 
         public  void  criarAutor ( TBLAutordto  dados )
@@ -25,13 +25,13 @@ namespace  POO3B10207 . BLL
 
         public  void  apagarAutor ( TBLAutordto  dados )
         {
-            string  sql  =  string . Formato ( $ @ " DELETE FROM TBL_Autor where id = { dados . IdAutor }; " );
+            string  sql  =  string .Format( $ @ " DELETE FROM TBL_Autor where id = { dados . IdAutor }; " );
             daoBanco . executarComando ( sql );
         }
 
         public  void  atualizarAutor ( TBLAutordto  dados )
         {
-            string  sql  =  string . Formato ( $ @ " UPDATE TBL_Autor SET nome = '{ dados . NomeAutor }', idade = '{ dados . IdadeAutor }') WHERE id = { dados . IdAutor }; " );
+            string  sql  =  string . Format ( $ @ " UPDATE TBL_Autor SET nome = '{ dados . NomeAutor }', idade = '{ dados . IdadeAutor }') WHERE id = { dados . IdAutor }; " );
             daoBanco . executarComando ( sql );
         }
     }
